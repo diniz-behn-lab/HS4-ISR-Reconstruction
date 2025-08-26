@@ -8,5 +8,3 @@ The files that are included in the method are:
 3. ISR estimation Mixed-Effect at the individual level
 4. Complete cohort model execution in a loop file.
 5. Preliminary results and analysis file.
-
-6. 

@@ -13,8 +13,8 @@ Each of these files should be ran in the order in which they are introduced here
 
 ## Dataset Template Preprocessing.R
 ### Inputs: 
-- Path to HS4 Participant and OGTT Data CSV file
-- Path to HS4 Participant Tanner
+- Path to HS4 OGTT Data with Participant Data CSV file
+- Path to HS4 Participant Puberty Data
 - Path to save clean data set outputs.
 
 ### Outputs:

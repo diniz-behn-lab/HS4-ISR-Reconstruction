@@ -15,6 +15,7 @@ Each of these files should be ran in the order in which they are introduced here
 ### Inputs: 
 - Path to HS4 Participant and OGTT Data CSV file
 - Path to HS4 Participant Tanner
+- Path to save clean data set outputs.
 
 ### Outputs:
 - Dataset CSV file in format to run ISR model (Path to save location needs to be edited)

@@ -32,9 +32,27 @@ C-Peptide data must be in pico moles per liter (pmol/L) for the model to produce
 Lastly, a BMI category is assigned to each participant using their BMI percentile information. The CDC recommends that BMI categories for children and adolescents be done using their BMI percentile which has been standardized by age and sex: https://www.cdc.gov/bmi/child-teen-calculator/bmi-categories.html. These values were used in the assignation of the "Group_BMI" variable. For assigning a Tanner staging variable, breast staging and testicular staging variables were used to identify the Tanner stage of the participant.
 
 ## Saving Cleaned Datasets
-After this preprocessing, both a csv and an xlsx form of the cleaned data should be stored in a local folder. Please update the desired location where you will choose to store these clean datasets.
+After this preprocessing, both a csv and an xlsx form of the cleaned data should be stored in a local folder. Please update the desired location where you would like to store these clean datasets.
 
 # Cohort_Likelihood_Parameter_Estimation.R
 
-### Input
-- 
+## Input
+- Path to Cleaned Dataset
+
+## Output
+- Cohort-specific model parameter value.
+- Plot demonstrating parameter value is a maximum.
+
+## Description
+This script calculates the lambda parameter value for the entire cohort of the dataset provided. This parameter value is calculated via maximum likelihood testing and prints the value wth great log-likehood for pertaining to the the data. Aside from the numerical value, the script also creates a plot which demonstrates that the value of lambda achieves a maximum log-likelihood value on the grid of values it searched on.
+
+# Mixed_Model_Individual_HS4.R
+## Inputs
+
+
+## Outputs
+
+## Description
+
+
+

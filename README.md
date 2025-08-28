@@ -25,8 +25,8 @@ This preprocessing script will take a raw csv file dataset in the Healthy Start 
 
 Given any version of HS4 data as input, the columns which are kept in the cleaned dataset are: Participant ID, Age, Sex, Type 2 Diabetes status, BMI percentile, Insulin at 0 min, C-Peptide (Cpep) at 0 min, Cpep at 15, Cpep at 30, Cpep at 60, Cpep at 60, Cpep at 90, Cpep at 120, and Cpep at 180. If the participant has visit 2 information, then we keep the same columns as above from their second visit. We alter the form of this dataset from a wide format to a long format. Meaining that any data from participants with visit 2 information were copied and moved to be treated as a new row in the dataset. Participant ID and the created dataset variable "Visit" can be used to track individuals with two recorded visits. 
 
-
-**Note** that C-Peptide data must be in pico moles per liter (pmol/L) for the model to produce accurate results. This script will convert the incoming data from nanograms/milliliter (ng/mL) to the necessary pmol/L. 
+#### Import Note
+C-Peptide data must be in pico moles per liter (pmol/L) for the model to produce accurate results. This script will convert the incoming data from nanograms/milliliter (ng/mL) to the necessary pmol/L. 
 
 Using the BMI percentile information, a BMI category is assigned to each participant. The CDC recommends that BMI categories for children and adolescents be done using their BMI percentile which has been standardized by age and sex: https://www.cdc.gov/bmi/child-teen-calculator/bmi-categories.html. These values were used in the assignation of the "Group_BMI" variable. For assigning a Tanner staging variable, breast staging and testicular staging variables were used to identify the Tanner stage of the participant.
 

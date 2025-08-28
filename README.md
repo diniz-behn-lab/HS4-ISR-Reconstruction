@@ -16,10 +16,16 @@ Each of these files should be ran in the order in which they are introduced here
 - Path to HS4 Participant and OGTT Data CSV file
 - Path to HS4 Participant Tanner
 
-This preprocessing script will take a raw csv file dataset in the Healthy Start 4 format and clean the raw dataset to a cleaner format with only the necessary data. The script also takes a puberty csv and extracts Tanner stage participant information. These two files serve as the only inputs to this script and the paths to the datafiles that you will use must be updated in the first two lines before running.
+### Outputs:
+- Dataset CSV file in format to run ISR model
+- Dataset XLSX file in format to run ISR model
 
-Given any form of the data with varying amounts of anthropomorphic variables, the columns which are kept in the cleaned dataset are: Participant ID, Age, Sex, Type 2 Diabetes status, BMI percentile, Insulin at 0 min, C-Peptide (Cpep) at 0 min, Cpep at 15, Cpep at 30, Cpep at 60, Cpep at 60, Cpep at 90, Cpep at 120, and Cpep at 180. Because each participant is scheduled for two visits, some participants have visit 2 information as well marked with a v2 after each variable name. The same columns with v2 are also kept.
+### Description
+This preprocessing script will take a raw csv file dataset in the Healthy Start 4 format and clean the raw dataset to csv or xlsx format with only the necessary data. The script also takes a puberty csv and extracts Tanner stage participant information to include in the final clean dataset.
 
-Data from visit 2s were in the same row as the data for the participant from their visit 1. Changing the format of this dataset from wide to long, any data from participants with visit 2 information were moved to their own row. Participant ID and a column variable created to denote the visit number of the data help connect rows of participants with both visits. 
+Given any version of HS4 data as input, the columns which are kept in the cleaned dataset are: Participant ID, Age, Sex, Type 2 Diabetes status, BMI percentile, Insulin at 0 min, C-Peptide (Cpep) at 0 min, Cpep at 15, Cpep at 30, Cpep at 60, Cpep at 60, Cpep at 90, Cpep at 120, and Cpep at 180. Because each participant is scheduled for two visits, some participants have visit 2 information. If the participant has this data, then the same columns listed above are kept from visit 2. Data from visit 2s originally comes in the same row as the participant's visit 1 data. We alter the form of this dataset from a wide to a long format and any data from participants with visit 2 information were copied and moved to be treated as a new row in the dataset. Participant ID and the dataset variable "Visit" are used to keep track of the participants with two visits. 
+
+Using the BMI percentile information, a BMI category is assigned to each participant. The CDC recommends that BMI categories for children and adolescents be done using their BMI percentile which has been standardized by age and sex: https://www.cdc.gov/bmi/child-teen-calculator/bmi-categories.html. 
 
 
+## Cohort_Likelihood 

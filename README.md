@@ -44,7 +44,7 @@ After this preprocessing, both a csv and an xlsx form of the cleaned data should
 - Plotted values of final parameter log likelihood.
 
 ## Description
-This script calculates the lambda parameter value for the entire cohort of the dataset provided. This parameter value is calculated via maximum likelihood testing and prints the value wth great log-likehood for pertaining to the the data. Aside from the numerical value, the script also creates a plot which demonstrates that the value of lambda achieves a maximum log-likelihood value on the grid of values it searched on.
+This script calculates the lambda parameter value for the entire cohort of the dataset provided. This parameter value is calculated via maximum likelihood testing and prints the value wth greatest log-likehood given the data. Aside from the numerical value, the script also creates a plot which demonstrates that the value of lambda achieves a maximum log-likelihood on the grid of values it searched on.
 
 # Mixed_Model_Individual_HS4.R
 ## Inputs

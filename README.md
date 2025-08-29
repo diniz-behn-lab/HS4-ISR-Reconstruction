@@ -61,12 +61,14 @@ This script calculates the lambda parameter value for the entire cohort of the d
 - Upper and lower bounds at 30 minute and 3 hour mark for AUC values.
 
 ## Description
-Ensure to set the working directly in R studio to the project folder housing all of these scripts. Insert the path of your cleaned dataset XLSX file in line 45 where the variable "df" is defined. Next, update the parameter value of lambda found from the previous script (Cohort_Likelihood_Parameter_Estimation.R) on line 50. One may change the value of the "range" parameter found on line 38 if you suspect the time-dependent correlation between sampling points should be increased or decreased in the ISR reconstruction.
+Start by setting your working directly in R studio to the project folder housing all of these scripts. 
 
-The location to save both the ISR reconstructed plots and observed vs reconstructed C-Peptide must be edited in lines 192 and 225, respecitively.
+Insert the path of your cleaned dataset XLSX file in line 45 where the variable "df" is defined. Next, update the parameter value of lambda found from the previous script (Cohort_Likelihood_Parameter_Estimation.R) on line 50. One may change the value of the "range" parameter found on line 38 if you suspect the time-dependent correlation between sampling points should be increased or decreased in the ISR reconstruction.
+
+The location to save both the ISR reconstructed plots and observed vs reconstructed C-Peptide must be edited in lines 192 and 225 (setwd()).
 
 This script then returns a list of all variable values calculated from an individual's data. This includes the ISR values at each minute of the OGTT, AUC values, and the error between observed and reconstructed C-Peptide values.
 
-
+## Cohort_Mixed_Effect_Model_Loop.R
 
 

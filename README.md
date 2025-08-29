@@ -66,8 +66,17 @@ Insert the path of your cleaned dataset XLSX file in line 45 where the variable 
 
 The location to save both the ISR reconstructed plots and observed vs reconstructed C-Peptide must be edited in lines 192 and 225 (setwd()).
 
-This script then returns a list of all variable values calculated from an individual's data. This includes the ISR values at each minute of the OGTT, AUC values, and the error between observed and reconstructed C-Peptide values.
+This script then returns a list of all variable values calculated from an individual's data. This includes the ISR values at each minute of the OGTT, calculated AUC values, and the error between observed and reconstructed C-Peptide values.
 
-## Cohort_Mixed_Effect_Model_Loop.R
+# Cohort_Mixed_Effect_Model_Loop.R
+## Inputs
+- Path to Mixed_Model_Individual_HS4.R
+- Path to cleaned dataset XLSX file
+
+## Outputs
+- Excel file with model outputs for entire cohort.
+- Excel file with estimated ISR values at each time point for the entire cohort.
+
+## Description
 
 

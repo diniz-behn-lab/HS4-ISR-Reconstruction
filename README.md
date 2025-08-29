@@ -74,9 +74,9 @@ This script then returns a list of all variable values calculated from an indivi
 - Path to cleaned dataset XLSX file
 
 ## Outputs
-- Excel file with model outputs for entire cohort.
-- Excel file with estimated ISR values at each time point for the entire cohort.
+- XLSX file with model outputs for entire cohort.
+- XLSX file with estimated ISR values at each time point for the entire cohort.
 
 ## Description
 
-
+This code calls the Mixed_Model_Individual.R in a for loop for all participants in the clean dataset with complete C-Peptide data. It assigns the model derived results (i.e., AUC values, time to peak) to a results dataframe and saves their estimated ISR in patient ISR dataframe. These files are saved in XLSX files containing the results for the entire cohort. Specify the location where you'd like this files to be saved.

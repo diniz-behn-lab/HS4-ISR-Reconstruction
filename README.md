@@ -48,16 +48,16 @@ This script calculates the lambda parameter value for the entire cohort of the d
 
 # Mixed_Model_Individual_HS4.R
 ## Inputs
--Path to cleaned dataset.
--Lambda parameter value.
--Theta/range parameter value.
+- Path to cleaned dataset.
+- Lambda parameter value.
+- Theta/range parameter value.
 
 ## Outputs
--Plot of reconstructed ISR with 95% credible bounds.
--Plot of observed vs reconstructed C-Peptide.
--Estimated ISR values during OGTT.
--Area under the curve calculations at each OGTT sampling point.
--Upper and lower bounds at 30 minute and 3 hour mark for AUC values.
+- Plot of reconstructed ISR with 95% credible bounds.
+- Plot of observed vs reconstructed C-Peptide.
+- Estimated ISR values during OGTT.
+- Area under the curve calculations at each OGTT sampling point.
+- Upper and lower bounds at 30 minute and 3 hour mark for AUC values.
 ## Description
 
 

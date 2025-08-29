@@ -41,17 +41,23 @@ After this preprocessing, both a csv and an xlsx form of the cleaned data should
 
 ## Output
 - Cohort-specific model parameter value.
-- Plot demonstrating parameter value is a maximum.
+- Plotted values of final parameter log likelihood.
 
 ## Description
 This script calculates the lambda parameter value for the entire cohort of the dataset provided. This parameter value is calculated via maximum likelihood testing and prints the value wth great log-likehood for pertaining to the the data. Aside from the numerical value, the script also creates a plot which demonstrates that the value of lambda achieves a maximum log-likelihood value on the grid of values it searched on.
 
 # Mixed_Model_Individual_HS4.R
 ## Inputs
-
+-Path to cleaned dataset.
+-Lambda parameter value.
+-Theta/range parameter value.
 
 ## Outputs
-
+-Plot of reconstructed ISR with 95% credible bounds.
+-Plot of observed vs reconstructed C-Peptide.
+-Estimated ISR values during OGTT.
+-Area under the curve calculations at each OGTT sampling point.
+-Upper and lower bounds at 30 minute and 3 hour mark for AUC values.
 ## Description
 
 

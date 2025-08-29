@@ -7,7 +7,6 @@ The files that are included in this repository are
 2. Cohort Parameter estimation script
 3. ISR estimation Mixed-Effect at the individual level
 4. Complete cohort model execution in a loop file.
-5. Preliminary results and analysis file.
 
 Each of these files should be ran in the order in which they are introduced here. There are a few lines in each scipt that have to be edited to ensure that each file runs correctly and is able to produce the correct output for the next file to use and run correctly.
 

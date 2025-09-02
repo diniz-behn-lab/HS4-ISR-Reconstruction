@@ -1,16 +1,6 @@
 # HS4-ISR-Reconstruction
 Collection of R files that implement the Garrish method for estimating and individual's ISR function within a 95% credible bound region from C-Peptide data. These scripts have been streamline to take in HS4 data specifically for the LEAD Center.
 
-# Coding Workflow
-There are two folders included in this repository. The "Main Scripts" folder holds all of the files which must be edited and executed to apply the model on the participant's data. The "Method_functions" folder holds necessary functions which assist in the computation or creation of the model; these code scripts do not require any editing whatsoever. 
-
-1. Dataset Template Preprocessing.R
-2. Cohort Parameter estimation script
-3. ISR estimation Mixed-Effect at the individual level
-4. Complete cohort model execution in a loop file.
-
-Each of these files should be ran in the order in which they are introduced here. There are a few lines in each scipt that have to be edited to ensure that each file runs correctly and is able to produce the correct output for the next file to use and run correctly. The functions and code files that are included in Method_functions will be used in the execution of the Main_Script files, but do not require any editing whatsoever.
-
 # File Hierarchy
 The folders of this repository should be stored in one common folder. Let's say that the name of the main folder is titled "HS4 Project." The path to this folder should be what you set as your working directory when executing in RStudio. Then, the hierarchy of files will be as followed
 - HS4 Project
@@ -20,6 +10,17 @@ The folders of this repository should be stored in one common folder. Let's say 
   - Main Scripts
   - Method_functions
   - Result Files
+
+
+# Coding Workflow
+There are two folders included in this repository. The "Main Scripts" folder holds all of the files which must be edited and executed to apply the model on the participant's data. The "Method_functions" folder holds necessary functions which assist in the computation or creation of the model; these code scripts do not require any editing whatsoever. 
+
+1. Dataset Template Preprocessing.R
+2. Cohort Parameter estimation script
+3. ISR estimation Mixed-Effect at the individual level
+4. Complete cohort model execution in a loop file.
+
+Each of these files should be ran in the order in which they are introduced here. There are a few lines in each scipt that have to be edited to ensure that each file runs correctly and is able to produce the correct output for the next file to use and run correctly. The functions and code files that are included in Method_functions will be used in the execution of the Main_Script files, but do not require any editing whatsoever.
 
 # Dataset Template Preprocessing.R
 ## Inputs: 

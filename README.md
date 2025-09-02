@@ -2,7 +2,7 @@
 Collection of R files that implement the Garrish method for estimating and individual's ISR function within a 95% credible bound region from C-Peptide data. These scripts have been streamline to take in HS4 data specifically for the LEAD Center.
 
 # File Hierarchy
-The folders of this repository should be stored in one common folder. Let's say that the name of the main folder is titled "HS4 Project." The path to this folder should be what you set as your working directory when executing in RStudio. Then, the hierarchy of files will be as followed
+The folders of this repository should be stored in one common folder. Let's say that the name of the main folder is titled "HS4 Project." The path to this folder should be what you set as your working directory when executing in RStudio. Then, the folders that are to be contained inside this main folder is:
 - HS4 Project
   - Cpep Plots
   - Datasets

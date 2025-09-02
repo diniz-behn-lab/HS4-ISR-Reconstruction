@@ -2,7 +2,8 @@
 Collection of R files that implement the Garrish method for estimating and individual's ISR function within a 95% credible bound region from C-Peptide data. These scripts have been streamline to take in HS4 data specifically for the LEAD Center.
 
 # Coding Workflow
-The files that are included in this repository are
+There are two folders included in this repository. The "Main Scripts" folder holds all of the files which must be edited and executed to apply the model on the participant's data. The "Method_functions" folder holds necessary functions which assist in the computation or creation of the model; these code scripts do not require any editing whatsoever. 
+
 1. Dataset Template Preprocessing.R
 2. Cohort Parameter estimation script
 3. ISR estimation Mixed-Effect at the individual level

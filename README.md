@@ -1,19 +1,10 @@
 # HS4-ISR-Reconstruction
 Collection of R files that implement the Garrish method for estimating and individual's ISR function within a 95% credible bound region from C-Peptide data. These scripts have been streamline to take in HS4 data specifically for the LEAD Center.
 
-# File Hierarchy
-The folders of this repository should be stored in one common folder. Let's say that the name of the main folder is titled "HS4 Project." The path to this folder should be what you set as your working directory when executing in RStudio. Then, the folders that are to be contained inside this main folder is:
-- HS4 Project
-  - Cpep Plots
-  - Datasets
-  - ISR Plots
-  - Main Scripts
-  - Method_functions
-  - Result Files
-
-
 # Coding Workflow
-There are two folders included in this repository. The "Main Scripts" folder holds all of the files which must be edited and executed to apply the model on the participant's data. The "Method_functions" folder holds necessary functions which assist in the computation or creation of the model; these code scripts do not require any editing whatsoever. 
+There are two folders included in this repository. The "Method_functions" folder holds necessary functions which assist in the computation and creation of the model. This folder should simply be downloaded, placed in the same location as the next set of code files, and do not require any editing whatsoever. The "Main Scripts" folder holds all of the files which must be edited and executed to apply the model on each participant's data. 
+
+The code scripts within the "Main Scripts" folder are:
 
 1. Dataset Template Preprocessing.R
 2. Cohort Parameter estimation script
@@ -60,6 +51,7 @@ This script calculates the lambda parameter value for the entire cohort of the d
 # Mixed_Model_Individual_HS4.R
 ## Inputs
 - Path to cleaned dataset XLSX file.
+- Path to "Method_functions" folder.
 - Path to save plots.
 - Lambda parameter value.
 - Theta/range parameter value.
@@ -72,7 +64,7 @@ This script calculates the lambda parameter value for the entire cohort of the d
 - Upper and lower bounds at 30 minute and 3 hour mark for AUC values.
 
 ## Description
-Start by setting your working directly in R studio to the project folder housing all of these scripts. 
+Start by setting your working directly in R studio to the project folder housing all of these scripts. Check that the path to the "Method_functions" folder is correct to import these functions.
 
 Insert the path of your cleaned dataset XLSX file in line 45 where the variable "df" is defined. Next, update the parameter value of lambda found from the previous script (Cohort_Likelihood_Parameter_Estimation.R) on line 50. One may change the value of the "range" parameter found on line 38 if you suspect the time-dependent correlation between sampling points should be increased or decreased in the ISR reconstruction.
 

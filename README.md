@@ -13,7 +13,7 @@ The code scripts within the "Main Scripts" folder are:
 3. ISR estimation Mixed-Effect at the individual level
 4. Complete cohort model execution in a loop file.
 
-You will run the scripts in this order. As mentioned above, each of these files will require you to edit a few lines only to make sure things are references the files you are providing it and their locations (paths) in your machine.
+You will run the scripts in this order. As mentioned above, each of these files in the "Main Scripts" folder require you to edit a few lines to make sure things the code is  referencing the location/path to the dataset you are building a model for.
 
 # Dataset Template Preprocessing.R
 ## Inputs: 
@@ -26,17 +26,19 @@ You will run the scripts in this order. As mentioned above, each of these files 
 - Dataset XLSX file in format to run ISR model
 
 ## Description
-This preprocessing script will take a raw csv file dataset in the Healthy Start 4 format and clean the raw dataset to csv or xlsx format with only the necessary data. The script also takes a puberty csv and extracts Tanner stage participant information to include in the final clean dataset.
+This preprocessing script will take a raw csv file dataset in the Healthy Start 4 format and return a cleaned CSV and XLSX version with only the necessary columns of the data. The script also takes a puberty csv and extracts Tanner stage participant information to include in the final clean dataset.
 
-Given any version of HS4 data as input, the columns which are kept in the cleaned dataset are: Participant ID, Age, Sex, Type 2 Diabetes status, BMI percentile, Insulin at 0 min, C-Peptide (Cpep) at 0 min, Cpep at 15, Cpep at 30, Cpep at 60, Cpep at 60, Cpep at 90, Cpep at 120, and Cpep at 180. If the participant has visit 2 information, then we keep the same columns as above from their second visit. We alter the form of this dataset from a wide format to a long format. Meaning that any data from participants with visit 2 information were copied and moved to be treated as a new row in the dataset. Participant ID and the created dataset variable "Visit" can be used to track individuals with two recorded visits. 
+Given any version of HS4 data as input, the columns which are kept in the cleaned dataset are: Participant ID, Age, Sex, Type 2 Diabetes status, BMI percentile, Insulin at 0 min, C-Peptide (Cpep) at 0 min, Cpep at 15, Cpep at 30, Cpep at 60, Cpep at 60, Cpep at 90, Cpep at 120, and Cpep at 180. 
 
-### Important Note
-C-Peptide data must be in pico moles per liter (pmol/L) for the model to produce accurate results. This script converts incoming data from nanograms/milliliter (ng/mL) to the necessary pmol/L. 
+The datasets come in with any visit 2 information as additional columns. Just to simplify the structure of the dataset we change the format from wide to long. Meaning that all instances of visit 2 data was moved to its own row after all of the visit 1 data. "Participant ID" and the "Visit" columns can be used to track all the partipants with two visits. 
+
+### Important Note: Units for C-Peptide
+This script converts incoming data from nanograms/milliliter (ng/mL) to pmol/L. C-Peptide data must be in pico moles per liter (pmol/L) for the model to produce accurate results.
 
 Lastly, a BMI category is assigned to each participant using their BMI percentile information. The CDC recommends that BMI categories for children and adolescents be done using their BMI percentile which has been standardized by age and sex: https://www.cdc.gov/bmi/child-teen-calculator/bmi-categories.html. These values were used in the assignation of the "Group_BMI" variable. For assigning a Tanner staging variable, breast staging and testicular staging variables were used to identify the Tanner stage of the participant.
 
 ## Saving Cleaned Datasets
-After this preprocessing, both a csv and an xlsx form of the cleaned data should be stored in a local folder. Please update the desired location where you would like to store these clean datasets.
+After this preprocessing, both a csv and an xlsx form of the cleaned data should be stored in a folder of your choice. Please update the desired location where you would like to store these clean datasets.
 
 # Cohort_Likelihood_Parameter_Estimation.R
 

@@ -22,7 +22,6 @@ You will run the scripts in this order. As mentioned above, each of these files 
 - Path to save clean data set outputs.
 
 ## Outputs:
-- Dataset CSV file in format to run ISR model 
 - Dataset XLSX file in format to run ISR model
 
 ## Description
@@ -38,7 +37,7 @@ This script converts incoming data from nanograms/milliliter (ng/mL) to pmol/L. 
 Lastly, a BMI category is assigned to each participant using their BMI percentile information. The CDC recommends that BMI categories for children and adolescents be done using their BMI percentile which has been standardized by age and sex: https://www.cdc.gov/bmi/child-teen-calculator/bmi-categories.html. These values were used in the assignation of the "Group_BMI" variable. For assigning a Tanner staging variable, breast staging and testicular staging variables were used to identify the Tanner stage of the participant.
 
 ## Saving Cleaned Datasets
-After this preprocessing, both a csv and an xlsx form of the cleaned data should be stored in a folder of your choice. Please update the desired location where you would like to store these clean datasets.
+After this preprocessing, an XLSX file of the cleaned data should be stored in a folder of your choice. Please update the desired location where you would like to store this clean datasets.
 
 # Cohort_Likelihood_Parameter_Estimation.R
 

@@ -2,7 +2,9 @@
 Collection of R files that implement the Garrish method for estimating an individual's ISR function within a 95% credible bound region from C-Peptide data. These scripts have been streamline to take in HS4 data specifically for the LEAD Center.
 
 # Getting Started
-The "Method Functions" folder holds function files which assist in create the model and help it execute computational related tasks. This files in this folder will not require any editing whatsoever. The "Main Scripts" folder holds the scripts which create the model specifically tailored for the dataset provided. These files will require some edits to correctly create the model.
+The "Method Functions" folder holds function files which assist in create the model and help it execute computational related tasks. This files in this folder will not require any editing whatsoever. 
+
+The "Main Scripts" folder holds the scripts which create the model specifically tailored for the dataset provided. These files will require some edits to correctly create the model.
 
 The code scripts within the "Main Scripts" folder are:
 

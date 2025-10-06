@@ -1,7 +1,7 @@
 # HS4-ISR-Reconstruction
 Collection of R files that implement the Garrish method for estimating and individual's ISR function within a 95% credible bound region from C-Peptide data. These scripts have been streamline to take in HS4 data specifically for the LEAD Center.
 
-# Coding Workflow
+# Getting Started
 There are two folders included in this repository. The "Method Functions" folder holds necessary functions which assist in the computation and creation of the model. This folder should simply be downloaded, placed in the same location as the next set of code files, and do not require any editing whatsoever. The "Main Scripts" folder holds all of the files which must be edited and executed to apply the model on each participant's data. 
 
 The code scripts within the "Main Scripts" folder are:

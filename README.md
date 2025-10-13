@@ -33,7 +33,6 @@ Given any version of HS4 data as input, the columns which are kept in the cleane
 
 The datasets come in with any visit 2 information as additional columns. Just to simplify the structure of the dataset we change the format from wide to long. Meaning that all instances of visit 2 data was moved to its own row after all of the visit 1 data. "Participant ID" and the "Visit" columns can be used to track all the partipants with two visits. 
 
-### Important Note: Units for C-Peptide
 This script converts incoming data from nanograms/milliliter (ng/mL) to pmol/L. C-Peptide data must be in pico moles per liter (pmol/L) for the model to produce accurate results.
 
 Lastly, a BMI category is assigned to each participant using their BMI percentile information. The CDC recommends that BMI categories for children and adolescents be done using their BMI percentile which has been standardized by age and sex: https://www.cdc.gov/bmi/child-teen-calculator/bmi-categories.html. These values were used in the assignation of the "Group_BMI" variable. For assigning a Tanner staging variable, breast staging and testicular staging variables were used to identify the Tanner stage of the participant.

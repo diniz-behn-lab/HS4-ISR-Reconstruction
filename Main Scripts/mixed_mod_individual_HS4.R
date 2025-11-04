@@ -2,7 +2,7 @@ library(fields)
 library(readxl)
 library(foreach)
 
-mixed_mod_individual_HS4 <- function(participant,save_plots = FALSE){
+mixed_mod_individual_HS4 <- function(participant, save_plots = FALSE){
 setwd("Z:/LEADStudentsTrainees/Ramirez, Daniel/120034/HS4 Project")
 
 # Set the path to the directory containing your R scripts
@@ -34,8 +34,9 @@ full_X<- cbind( e_sites, e_sites^2)
 X<- full_X[-1, ]
 
 # Kernel matrix
-full_K<- build_kernel_matrix(e_sites, e_sites, range = 15) #range = theta param
-star_K<- build_kernel_matrix(e_sites[-1], e_sites[-1], range = 15) 
+theta = 5
+full_K<- build_kernel_matrix(e_sites, e_sites, range = theta) #range = theta param
+star_K<- build_kernel_matrix(e_sites[-1], e_sites[-1], range = theta) 
 
 ###########################
 ### select participant
@@ -47,7 +48,7 @@ df <- pull_complete_cpep_data("Z:/LEADStudentsTrainees/Ramirez, Daniel/120034/HS
 sample_size<- nrow(df)
 cohort<- 1:sample_size
 
-lambda<-40.31747 #Computed with cohort_likelihood_real_data
+lambda<- 1.5 #Computed with cohort_likelihood_real_data
 
 w15m <- c(1/2, rep(1,14), 1/2)
 w30m <- c(1/2, rep(1,29), 1/2)
@@ -241,5 +242,6 @@ result <- list(partic = df$ID[participant], bmi_cat = df$Group_BMI[participant],
 
  return(result)
 }
+
 
 

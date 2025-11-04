@@ -147,8 +147,8 @@ h_ensemble <- sapply(1:ensemble_size, function(j) {
 S_ensemble<- est_S0 * exp( h_ensemble)
 ensemble_AB = (abs(S_ensemble - est_S0) + S_ensemble - est_S0)/2 #Above Baseline
 
-lBoundBF<- apply( S_ensemble, 1, FUN = quantile, probs = .025/8)
-uBoundBF<- apply( S_ensemble, 1, FUN = quantile, probs = 1-.025/8)
+lBoundBF<- apply( S_ensemble, 1, FUN = quantile, probs = .025/length(full_Cpep))
+uBoundBF<- apply( S_ensemble, 1, FUN = quantile, probs = 1-.025/length(full_Cpep)
 
 topLimit = any(hat_S[-1] > uBoundBF[-1])
 botLimit = any(hat_S[-1] < lBoundBF[-1])
@@ -156,11 +156,11 @@ botLimit = any(hat_S[-1] < lBoundBF[-1])
 ensemble30min_AUC = w30m %*% ensemble_AB[1:31]
 ensemble3h_AUC = w3h %*% ensemble_AB
 
-lb30m = apply(ensemble30min_AUC, 1, FUN = quantile, probs = .025/8)
-ub30m = apply(ensemble30min_AUC, 1, FUN = quantile, probs = 1 -.025/8)
+lb30m = apply(ensemble30min_AUC, 1, FUN = quantile, probs = .025)
+ub30m = apply(ensemble30min_AUC, 1, FUN = quantile, probs = 1 -.025)
 
-lb3h = apply(ensemble3h_AUC, 1, FUN = quantile, probs = .025/8)
-ub3h = apply(ensemble3h_AUC, 1, FUN = quantile, probs = 1 -.025/8)
+lb3h = apply(ensemble3h_AUC, 1, FUN = quantile, probs = .025/length(full_Cpep))
+ub3h = apply(ensemble3h_AUC, 1, FUN = quantile, probs = 1 -.025/length(full_Cpep))
 
 #### ISR Reconstruction Plots ####
 
@@ -241,4 +241,5 @@ result <- list(partic = df$ID[participant], bmi_cat = df$Group_BMI[participant],
 
  return(result)
 }
+
 
